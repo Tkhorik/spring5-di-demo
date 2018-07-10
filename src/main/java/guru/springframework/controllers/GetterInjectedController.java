@@ -15,7 +15,10 @@ public class GetterInjectedController {
     public String sayHello(){
         return greetingService.sayGreeting();
     }
-
+/* @Qualifier Квалификатор аннотации позволяет устранить неоднозначность ссылок бина,
+когда сам Spring не сможет этого сделать. Spring XML конфигурация поддерживает такой вариант,
+  но, конечно, без поддержки безопасности типов. В этом примере мы обращаем внимание на использование
+Java конфигурации и сканировании компонентов для регистрации бинов.*/
     @Autowired
     public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
