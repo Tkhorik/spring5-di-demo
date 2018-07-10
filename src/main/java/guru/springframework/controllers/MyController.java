@@ -16,7 +16,10 @@ public class MyController {
     }
 
     public String hello(){
-        System.out.println("Hello!!! ");
+        int i = 5;
+        int s = 2992;
+        int summ = i*s ;
+        System.out.println("Hello from initial controller!!! " + summ);
 
         return greetingService.sayGreeting();
     }
